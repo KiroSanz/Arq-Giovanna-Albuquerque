@@ -30,7 +30,7 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #333;
     line-height: 1.6;
-    background-color: #8f8273; /* ou outra cor que combine com seu design */
+    background-color: #ECE9E0; /* ou outra cor que combine com seu design */
 }
 
 h1, h2, h3 {
@@ -458,6 +458,7 @@ header.scrolled .menu-mobile {
 /* Contato */
 section.formulario {
     padding: 40px 4%;
+    background-color: #ECE9E0;
 }
 
 form {
@@ -534,7 +535,7 @@ footer {
 }
 
 .redes-sociais a:hover {
-    color: #6a5a41;
+    color: #000000;
 }
 
 /* Footer - Logo à Esquerda */
