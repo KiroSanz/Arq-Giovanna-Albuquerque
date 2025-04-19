@@ -1,17 +1,18 @@
 /* ===== HEADER/NAVBAR ===== */
 header {
-    background: transparent;
+    background: #ECE9E0;
     position: fixed;
     top: 0;
     left: 0;
-    width: 85%;
+    width: 90%;
     z-index: 1000;
     padding: 15px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s ease;
-}
+    box-shadow: #c7c0aa 0 0 25px;
+} 
 
 /* Efeito ao rolar a página */
 header.scrolled {
@@ -170,7 +171,7 @@ header.scrolled .menu-mobile {
 
 .carrossel-btn {
     position: absolute;
-    top: 75%;
+    top: 50%;
     transform: translateY(-50%);
     background: rgba(0,0,0,0.5);
     color: white;

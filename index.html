@@ -58,7 +58,7 @@
             <img src="/img/andre.jpg" alt="Residência MW" class="portfolio-img">
             <div class="portfolio-overlay">
                 <h3>Residência MW</h3>
-                <a href="#" class="portfolio-link">Ver projeto →</a>
+                <a href="projetos/html/residenciamw.html" class="portfolio-link">Ver projeto →</a>
             </div>
         </div>
 
@@ -170,5 +170,19 @@
     </footer>
     </footer>
     <script src="/javascript/projeto.js"></script>
+    <div class="preloader">
+        <!-- Pode adicionar uma animação ou spinner aqui -->
+        <div class="loader"></div>
+    </div>
+    
+    <script>
+        window.addEventListener('load', function() {
+            const preloader = document.querySelector('.preloader');
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+    </script>
 </body>
 </html>
