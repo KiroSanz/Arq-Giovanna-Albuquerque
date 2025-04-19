@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Social LC | Giovanna Albuquerque</title>
+    <link rel="stylesheet" href="/projetos/css/conexaooculos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon (ajuste o caminho conforme sua estrutura) -->
+    <link rel="icon" href="/img/fav.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/fav.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/img/LOGO MARCA GA TERRACOTA.png" alt="Logo Giovanna">
+        </div>
+        <nav>
+            <ul>
+                <li> <a href="/html/index.html">Home</a></li>
+                <li> <a href="/html/projetos.html">Portfólio</a></li>
+                <li> <a href="/html/index.html#sobre">Sobre</a></li>
+                <li> <a href="/html/index.html#formulario">Contato</a></li>
+            </ul>
+            <div class="menu-mobile" id="menuMobile">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="project-page">
+        <!-- Cabeçalho do Projeto -->
+        <section class="project-header">
+            <div class="container">
+                <h1>Residência LC</h1>
+                <p class="subtitle">Lar onde Acolhimento e Conexão se encontram.</p>
+            </div>
+        </section>
+
+        <!-- Carrossel de Imagens -->
+        <section class="project-gallery">
+            <div class="carrossel">
+                <!-- Imagens serão adicionadas via CSS ou JS -->
+                <div class="slide active">
+                    <img src="/img/lc5.jpg" alt="Residência LC">
+                </div>
+                <div class="slide">
+                    <img src="/img/lc1.jpg" alt="Residência LC">
+                </div>
+                <div class="slide">
+                    <img src="/img/lc2.jpg" alt="Residência LC">
+                </div>
+                <div class="slide">
+                    <img src="/img/lc3.jpg" alt="Residência LC">
+                </div>
+                <div class="slide">
+                    <img src="/img/lc4.jpg" alt="Residência LC">
+                </div>
+                <!-- Adicione mais slides conforme necessário -->
+                <button class="carrossel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carrossel-btn next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Ficha Técnica -->
+        <section class="project-specs">
+            <div class="container">
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h3>Localização</h3>
+                        <p>Piedade, SP</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Ano</h3>
+                        <p>2024</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Status</h3>
+                        <p>Em Andamento</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Tipo</h3>
+                        <p>Residência Unifamiliar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Descrição do Projeto -->
+        <section class="project-description">
+            <div class="container">
+                <h2>Sobre o Projeto</h2>
+                <p>Em uma residência na cidade de Piedade, a reforma de interiores foi muito além da estética — ela nasceu do desejo de transformar queixas em acolhimento, e espaços em lar. Os moradores buscavam mais luz, mais conexão e aquela sensação de estarem juntos de verdade.</p>
+                <p>A área de convívio, antes marcada pela pouca iluminação natural e pela divisão entre os ambientes, agora se abriu para a luz e para o encontro. Integramos os espaços para que a casa recebesse a família sem barreiras, criando um fluxo leve e convidativo. Cada canto foi pensado para aproximar, abraçar e fazer com que todos — moradores e visitantes — se sintam em casa, desde o primeiro passo.
+                    <br>
+                    <br>
+                    Porque conforto também é isso: estar perto, iluminado e cercado de afeto.</p>
+            </div>
+        </section>
+
+        <!-- Galeria Adicional (Opcional) -->
+        <section class="project-more">
+            <div class="container">
+                <h2>Detalhes</h2>
+                <div class="image-grid">
+                    <img src="/img/lc6.jpg" alt="Mais detalhes">
+                    <img src="/img/lc7.jpg" alt="Mais detalhes">
+                    <!-- Adicione mais imagens -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Navegação entre Projetos -->
+        <section class="project-navigation">
+            <div class="container">
+                <a href="/projetos/html/residenciamw.html" class="nav-btn">← Projeto Anterior</a>
+                <a href="/html/projetos.html" class="nav-btn">Voltar ao Portfólio</a>
+                <a href="/projetos/html/conexaooculos.html" class="nav-btn">Próximo Projeto →</a>
+            </div>
+        </section>
+    </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img src="/img/LOGO MARCA GA TERRACOTA.png" alt="Giovanna Albuquerque Arquitetura">
+                    </div>
+                    <div class="footer-info-wrapper">
+                        <div class="footer-info">
+                            <div class="footer-col">
+                                <h3>ENDEREÇO</h3>
+                                <p>Av. Dr. Américo Figueiredo, Nº 3656, sala 02<br>
+                                Júlio Mesquita Filho - CEP: 18053-000
+                              Sorocaba/SP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Giovanna Albuquerque Arquitetura | Interiores. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+    <script src="/projetos/js/residenciacl.js"></script>
+</body>
+</html>

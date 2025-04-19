@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seu Site</title>
+        <!-- Link CSS CORRETO (ajuste o caminho conforme sua estrutura) -->
+        <link rel="stylesheet" href="/css/projetos.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="icon" href="/img/fav.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="/img/fav.ico" type="image/x-icon">
+    </head>
+<body>
+    <!-- Header/Navbar -->
+    <header id="navbar">
+        <div class="logo">
+            <img src="/img/LOGO MARCA GA TERRACOTA.png" alt="Giovanna Albuquerque Arquitetura">
+        </div>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#portfolio">Portfólio</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#formulario">Contato</a></li>
+            </ul>
+            <div class="menu-mobile" id="menuMobile">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section para Projetos -->
+    <section class="projects-hero">
+        <div class="projects-hero-content">
+            <h1>Nossos Projetos</h1>
+            <p>Explore nossa coleção de trabalhos que refletem nossa abordagem única em arquitetura e design de interiores.</p>
+        </div>
+    </section>
+
+    <!-- Filtro de Projetos -->
+    <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="residencial">Residencial</button>
+        <button class="filter-btn" data-filter="comercial">Comercial</button>
+        <button class="filter-btn" data-filter="interiores">Interiores</button>
+    </div>
+
+    <!-- Grid de Projetos -->
+    <section class="projects-grid">
+        <!-- Projeto 1 -->
+        <div class="project-card" data-category="interiores">
+            <div class="project-image">
+                <img src="/img/andre.jpg" alt="Residência MW">
+                <div class="project-overlay">
+                    <h3>Residência MW</h3>
+                    <a href="/projetos/html/residenciamw.html" class="project-link">Ver detalhes →</a>
+                </div>
+            </div>
+            <div class="project-info">
+                <span class="project-category">Interiores</span>
+                <h3>Residência MW</h3>
+                <p>São Paulo/SP - 2024</p>
+            </div>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="project-card" data-category="residencial">
+            <div class="project-image">
+                <img src="/img/cl.jpg" alt="Residência CL">
+                <div class="project-overlay">
+                    <h3>Residência CL</h3>
+                    <a href="/projetos/html/residenciacl.html" class="project-link">Ver detalhes →</a>
+                </div>
+            </div>
+            <div class="project-info">
+                <span class="project-category">Residencial</span>
+                <h3>Residência CL</h3>
+                <p>Piedade/SP - 2024</p>
+            </div>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="project-card" data-category="residencial">
+            <div class="project-image">
+                <img src="/img/lc.jpg" alt="Área Social LC">
+                <div class="project-overlay">
+                    <h3>Área Social LC</h3>
+                    <a href="/projetos/html/arealc.html" class="project-link">Ver detalhes →</a>
+                </div>
+            </div>
+            <div class="project-info">
+                <span class="project-category">Residencial</span>
+                <h3>Área Social LC</h3>
+                <p>Piedade/SP - 2024</p>
+            </div>
+        </div>
+
+        <!-- Projeto 4 -->
+        <div class="project-card" data-category="interiores">
+            <div class="project-image">
+                <img src="/img/Quarto RP Logo.png" alt="Escritório Corporativo">
+                <div class="project-overlay">
+                    <h3>Quarto RP</h3>
+                    <a href="/projetos/html/quartorp.html" class="project-link">Ver detalhes →</a>
+                </div>
+            </div>
+            <div class="project-info">
+                <span class="project-category">Interiores</span>
+                <h3>Quarto RP</h3>
+                <p>Sorocaba/SP - 2023</p>
+            </div>
+        </div>
+
+        <!-- Projeto 5 -->
+        <div class="project-card" data-category="comercial">
+            <div class="project-image">
+                <img src="/img/Otica Logo.jpg" alt="Apartamento JK">
+                <div class="project-overlay">
+                    <h3>Ótica Conexão dos Óculos</h3>
+                    <a href="/projetos/html/conexaooculos.html" class="project-link">Ver detalhes →</a>
+                </div>
+            </div>
+            <div class="project-info">
+                <span class="project-category">Comercial</span>
+                <h3>Ótica Conexão dos Óculos</h3>
+                <p>Piedade/SP - 2025</p>
+            </div>
+        </div>
+
+        <!-- Projeto 6 -->
+        <div class="project-card" data-category="interiores">
+            <div class="project-image">
+                <img src="/img/Quarto VA Logo.png" alt="Casa de Praia">
+                <div class="project-overlay">
+                    <h3>Quarto VA</h3>
+                    <a href="/projetos/html/quartova.html" class="project-link">Ver detalhes →</a>
+                </div>
+            </div>
+            <div class="project-info">
+                <span class="project-category">Interiores</span>
+                <h3>Quarto VA</h3>
+                <p>Sorocaba/SP - 2023</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/img/LOGO MARCA GA TERRACOTA.png" alt="Giovanna Albuquerque Arquitetura">
+                </div>
+                <div class="footer-info-wrapper">
+                    <div class="footer-info">
+                        <div class="footer-col">
+                            <h3>ENDEREÇO</h3>
+                            <p>Av. Dr. Américo Figueiredo, Nº 3656, sala 02<br>
+                            Júlio Mesquita Filho - CEP: 18053-000
+                          Sorocaba/SP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Giovanna Albuquerque Arquitetura | Interiores. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/javascript/projeto.js"></script>
+</body>
+</html>
