@@ -2,30 +2,29 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Conexão dos Óculos | Giovanna Albuquerque</title>
-    <link rel="stylesheet" href="/projetos/css/conexaooculos.css">
+    <link rel="stylesheet" href="/projetos/css/arealc.css">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Favicon (ajuste o caminho conforme sua estrutura) -->
     <link rel="icon" href="/img/fav.ico" type="image/x-icon">
     <link rel="shortcut icon" href="/img/fav.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="/img/LOGO MARCA GA TERRACOTA.png" alt="Logo Giovanna">
+            <img src="/img/LOGO MARCA GA TERRACOTA.png" alt="Logo Giovanna" loading="lazy">
         </div>
         <nav>
-            <ul>
-                <li> <a href="/index.html">Home</a></li>
-                <li> <a href="/html/projetos.html">Portfólio</a></li>
-                <li> <a href="/html/index.html#sobre">Sobre</a></li>
-                <li> <a href="/html/index.html#formulario">Contato</a></li>
+            <ul id="navMenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/html/projetos.html">Portfólio</a></li>
+                <li><a href="/html/index.html#sobre">Sobre</a></li>
+                <li><a href="/html/index.html#formulario">Contato</a></li>
             </ul>
-            <div class="menu-mobile" id="menuMobile">
+            <button class="menu-mobile" id="menuMobile" aria-label="Menu Mobile">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
         </nav>
     </header>
 
@@ -114,37 +113,41 @@
         <!-- Navegação entre Projetos -->
         <section class="project-navigation">
             <div class="container">
-                <a href="/projetos/html/arealc.html" class="nav-btn">← Projeto Anterior</a>
+                <a href="/projetos/html/residenciamw.html" class="nav-btn">← Projeto Anterior</a>
                 <a href="/html/projetos.html" class="nav-btn">Voltar ao Portfólio</a>
-                <a href="/projetos/html/quartorp.html" class="nav-btn">Próximo Projeto →</a>
+                <a href="/projetos/html/conexaooculos.html" class="nav-btn">Próximo Projeto →</a>
             </div>
         </section>
     </main>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-content">
-                    <div class="footer-logo">
-                        <img src="/img/LOGO MARCA GA TERRACOTA.png" alt="Giovanna Albuquerque Arquitetura">
-                    </div>
-                    <div class="footer-info-wrapper">
-                        <div class="footer-info">
-                            <div class="footer-col">
-                                <h3>ENDEREÇO</h3>
-                                <p>Av. Dr. Américo Figueiredo, Nº 3656, sala 02<br>
-                                Júlio Mesquita Filho - CEP: 18053-000
-                              Sorocaba/SP</p>
-                            </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/img/LOGO MARCA GA TERRACOTA.png" alt="Giovanna Albuquerque Arquitetura" loading="lazy">
+                </div>
+                <div class="footer-info-wrapper">
+                    <div class="footer-info">
+                        <div class="footer-col">
+                            <h3>ENDEREÇO</h3>
+                            <p>Av. Dr. Américo Figueiredo, Nº 3656, sala 02<br>
+                            Júlio Mesquita Filho - CEP: 18053-000<br>
+                            Sorocaba/SP</p>
                         </div>
                     </div>
                 </div>
-                <div class="footer-copyright">
-                    <p>&copy; 2025 Giovanna Albuquerque Arquitetura | Interiores. Todos os direitos reservados.</p>
-                </div>
             </div>
-        </footer>
+            <div class="footer-copyright">
+                <p>&copy; <span id="currentYear"></span> Giovanna Albuquerque Arquitetura | Interiores. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
-    <script src="/projetos/js/residenciacl.js"></script>
+    <script src="/projetos/js/otica.js"></script>
+    <script>
+        // Atualiza o ano do copyright automaticamente
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

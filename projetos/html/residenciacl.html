@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Residência CL | Giovanna Albuquerque</title>
     <link rel="stylesheet" href="/projetos/css/residenciacl.css">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
@@ -120,30 +120,34 @@
         </section>
     </main>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-content">
-                    <div class="footer-logo">
-                        <img src="/img/LOGO MARCA GA TERRACOTA.png" alt="Giovanna Albuquerque Arquitetura">
-                    </div>
-                    <div class="footer-info-wrapper">
-                        <div class="footer-info">
-                            <div class="footer-col">
-                                <h3>ENDEREÇO</h3>
-                                <p>Av. Dr. Américo Figueiredo, Nº 3656, sala 02<br>
-                                Júlio Mesquita Filho - CEP: 18053-000
-                              Sorocaba/SP</p>
-                            </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/img/LOGO MARCA GA TERRACOTA.png" alt="Giovanna Albuquerque Arquitetura" loading="lazy">
+                </div>
+                <div class="footer-info-wrapper">
+                    <div class="footer-info">
+                        <div class="footer-col">
+                            <h3>ENDEREÇO</h3>
+                            <p>Av. Dr. Américo Figueiredo, Nº 3656, sala 02<br>
+                            Júlio Mesquita Filho - CEP: 18053-000<br>
+                            Sorocaba/SP</p>
                         </div>
                     </div>
                 </div>
-                <div class="footer-copyright">
-                    <p>&copy; 2025 Giovanna Albuquerque Arquitetura | Interiores. Todos os direitos reservados.</p>
-                </div>
             </div>
-        </footer>
+            <div class="footer-copyright">
+                <p>&copy; <span id="currentYear"></span> Giovanna Albuquerque Arquitetura | Interiores. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="/projetos/js/residenciacl.js"></script>
+    <script>
+        // Atualiza o ano do copyright automaticamente
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
