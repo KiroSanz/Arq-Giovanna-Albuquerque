@@ -105,20 +105,34 @@
     </section>
 
     <!-- Contato -->
-    <section class="formulario">
-        <div id="formulario" class="container">
-            <h2 class="titulo">Receba UM ORÇAMENTO</h2>
-            <form action="https://formspree.io/f/xvgkbkab" method="POST" id="formOrcamento">
-                <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required>
-                <input type="email" name="email" id="email" placeholder="Seu e-mail:" required>
-                <input type="text" name="cidade" id="cidade" placeholder="Sua cidade:" required>
-                <input type="tel" name="celular" id="celular" placeholder="Seu celular:">
-                <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem:" required></textarea>
-                <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+    <section class="form-section" id="formulario">
+        <div class="container">
+            <h2 class="section-title">Receba UM ORÇAMENTO</h2>
+            <form action="https://formspree.io/f/xvgkbkab" method="POST" id="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" name="cidade" id="cidade" required>
+                </div>
+                <div class="form-group">
+                    <label for="celular">Celular:</label>
+                    <input type="tel" name="celular" id="celular">
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea name="mensagem" id="mensagem" required></textarea>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="submit-btn">ENVIAR</button>
+                </div>
             </form>
-            <div id="mensagem-sucesso" style="display: none; margin-top: 20px; padding: 10px; background: #4CAF50; color: white; text-align: center; border-radius: 5px;">
-                Mensagem enviada com sucesso!
-            </div>
         </div>
     </section>
 
