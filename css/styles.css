@@ -145,7 +145,6 @@ header.scrolled .menu-mobile {
 }
 
 .hero::before {
-    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -359,7 +358,7 @@ header.scrolled .menu-mobile {
 }
 
 .sobre::before {
-    content: '';
+    /* content: ''; */
     position: absolute;
     top: 0;
     left: 0;
