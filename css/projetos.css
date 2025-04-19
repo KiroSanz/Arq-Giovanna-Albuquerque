@@ -139,6 +139,7 @@ header.scrolled .menu-mobile {
 .projects-filter {
     padding: 30px 0;
     background: var(--light);
+
 }
 
 .filter-btn {
@@ -161,6 +162,7 @@ header.scrolled .menu-mobile {
 /* ===== PROJECTS GRID ===== */
 .projects-grid {
     padding: 40px 0;
+    width: 100%;
 }
 
 .project-card {
@@ -169,6 +171,8 @@ header.scrolled .menu-mobile {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease;
+    width: auto;
+    height: 50vh;
 }
 
 .project-card:hover {
@@ -243,16 +247,22 @@ header.scrolled .menu-mobile {
     border-radius: 4px;
     font-size: 0.8rem;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .project-info h3 {
     font-size: 1.3rem;
     margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
 }
 
 .project-info p {
     color: #666;
     font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
 }
 
 /* ===== FOOTER ===== */
