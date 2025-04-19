@@ -2,12 +2,10 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Giovanna Albuquerque | Arquitetura e Interiores</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="/img/fav.ico" type="image/x-icon">
     <link rel="shortcut icon" href="/img/fav.ico" type="image/x-icon">
@@ -17,113 +15,103 @@
     <!-- Header/Navbar -->
     <header id="navbar">
         <div class="logo">
-            <img src="/img/LOGO MARCA GA TERRACOTA.png" alt="Giovanna Albuquerque Arquitetura">
+            <img src="/img/LOGO MARCA GA TERRACOTA.png" alt="Giovanna Albuquerque Arquitetura" loading="lazy">
         </div>
         <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
+            <ul id="navMenu">
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="#portfolio">Portfólio</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#formulario">Contato</a></li>
             </ul>
-            <div class="menu-mobile" id="menuMobile">
+            <button class="menu-mobile" id="menuMobile" aria-label="Menu Mobile">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="logo-hero">
-            </div>
             <div class="hero-text">
                 <h2>TRANSFORME SEU ESPAÇO COM EXCLUSIVIDADE</h2>
                 <p>SINGULARES E EFICIENTES</p>
-               <a href="#portfolio"><button class="smooth-scroll-btn" onclick="smoothScrollToProjects()">CONHEÇA NOSSOS PROJETOS </button></a>
+                <a href="#portfolio" class="smooth-scroll-btn">CONHEÇA NOSSOS PROJETOS</a>
             </div>
         </div>
     </section>
 
-<!-- Seção Portfólio -->
-<section class="portfolio" id="portfolio">
-    <div class="portfolio-header">
-        <h2>Portfólio</h2>
-        <p>Nesta sessão você poderá ver os meus trabalhos e saber mais sobre eles!</p>
-    </div>
-
-    <div class="portfolio-grid">
-        <!-- Projeto 1 -->
-        <div class="portfolio-item">
-            <img src="/img/andre.jpg" alt="Residência MW" class="portfolio-img">
-            <div class="portfolio-overlay">
-                <h3>Residência MW</h3>
-                <a href="projetos/html/residenciamw.html" class="portfolio-link">Ver projeto →</a>
+    <!-- Seção Portfólio -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="portfolio-header">
+                <h2>Portfólio</h2>
+                <p>Nesta sessão você poderá ver os meus trabalhos e saber mais sobre eles!</p>
             </div>
-        </div>
 
-        <!-- Projeto 2 -->
-        <div class="portfolio-item">
-            <img src="/img/cl.jpg" alt="Residência CL" class="portfolio-img">
-            <div class="portfolio-overlay">
-                <h3>Residência CL</h3>
-                <a href="projetos/html/residenciacl.html" class="portfolio-link">Ver projeto →</a>
+            <div class="portfolio-grid">
+                <!-- Projeto 1 -->
+                <div class="portfolio-item">
+                    <img src="/img/andre.jpg" alt="Residência MW" class="portfolio-img" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Residência MW</h3>
+                        <a href="./projetos/html/residenciamw.html" class="portfolio-link">Ver projeto →</a>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="portfolio-item">
+                    <img src="/img/cl.jpg" alt="Residência CL" class="portfolio-img" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Residência CL</h3>
+                        <a href="/projetos/html/residenciacl.html" class="portfolio-link">Ver projeto →</a>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="portfolio-item">
+                    <img src="/img/lc.jpg" alt="Área Social LC" class="portfolio-img" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Área Social LC</h3>
+                        <a href="/projetos/html/arealc.html" class="portfolio-link">Ver projeto →</a>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Projeto 3 -->
-        <div class="portfolio-item">
-            <img src="/img/lc.jpg" alt="Área Social LC" class="portfolio-img">
-            <div class="portfolio-overlay">
-                <h3>Área Social LC</h3>
-                <a href="projetos/html/arealc.html" class="portfolio-link">Ver projeto →</a>
+            <!-- Botão Mais Projetos -->
+            <div class="portfolio-more-container">
+                <a href="/html/projetos.html" class="more-link">Mais Projetos →</a>
             </div>
-        </div>
-    </div>
-
-    <!-- Botão Mais Projetos -->
-    <div class="portfolio-more-container">
-        <a href="html/projetos.html" class="more-link">Mais Projetos →</a>
-    </div>
-</section>
-
-            <!-- Adicione mais itens aqui -->
         </div>
     </section>
 
     <!-- Sobre -->
     <section class="sobre" id="sobre">
-        <div class="sobre-container">
+        <div class="container">
             <div class="sobre-content">
                 <div class="sobre-texto">
-            <h2>Sobre mim</h2>
-            <p>Giovanna Albuquerque, <strong>Arquiteta e Urbanista, formada há 2 anos pela Universidade de Sorocaba (UNISO). </strong>
-                <br>
-                <br>
-
-                A <strong>minha paixão pela arquitetura</strong> surgiu da busca por soluções criativas que busquem <strong>promover acessibilidade e bem-estar</strong>, impactando positivamente na <strong>vida das pessoas</strong>.
-                <br>
-                <br>
-                <strong>Com experiência</strong> adquirida ao longo dos anos em renomados escritórios de arquitetura, onde trabalhei no desenvolvimento de <strong>projetos residenciais, comerciais e corporativos</strong>, percebi a necessidade de seguir meu próprio caminho. Foi assim que surgiu a <strong>GA Arquitetura e Interiores</strong>, um espaço onde posso <strong>transformar sonhos em realidade e criar ambientes que contam histórias e geram afetos.</strong>
-                <br>
-                <br>
-                <strong>GA Arquitetura e Interiores: Arquitetura, interiores, histórias e emoções</strong></p>
-            <br>
+                    <h2>Sobre mim</h2>
+                    <p>Giovanna Albuquerque, <strong>Arquiteta e Urbanista, formada há 2 anos pela Universidade de Sorocaba (UNISO).</strong></p>
+                    <p>A <strong>minha paixão pela arquitetura</strong> surgiu da busca por soluções criativas que busquem <strong>promover acessibilidade e bem-estar</strong>, impactando positivamente na <strong>vida das pessoas</strong>.</p>
+                    <p><strong>Com experiência</strong> adquirida ao longo dos anos em renomados escritórios de arquitetura, onde trabalhei no desenvolvimento de <strong>projetos residenciais, comerciais e corporativos</strong>, percebi a necessidade de seguir meu próprio caminho. Foi assim que surgiu a <strong>GA Arquitetura e Interiores</strong>, um espaço onde posso <strong>transformar sonhos em realidade e criar ambientes que contam histórias e geram afetos.</strong></p>
+                    <p><strong>GA Arquitetura e Interiores: Arquitetura, interiores, histórias e emoções</strong></p>
+                </div>
+                <div class="sobre-imagem">
+                    <img src="/img/IMG_0505.jpg" alt="Giovanna Albuquerque" loading="lazy">
+                </div>
+            </div>
         </div>
-        <div class="sobre-imagem">
-            <img src="/img/IMG_0505.jpg" alt="Giovanna Albuquerque">
-        </div>
-    </div>
-    </div>
+    </section>
 
     <!-- Contato -->
     <section class="formulario">
-        <div id="formulario" class="interface">
+        <div id="formulario" class="container">
             <h2 class="titulo">Receba UM ORÇAMENTO</h2>
             <form action="https://formspree.io/f/xvgkbkab" method="POST" id="formOrcamento">
                 <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required>
                 <input type="email" name="email" id="email" placeholder="Seu e-mail:" required>
-                <input type="cidade" name="cidade" id="cidade" placeholder="Sua cidade:" required>
+                <input type="text" name="cidade" id="cidade" placeholder="Sua cidade:" required>
                 <input type="tel" name="celular" id="celular" placeholder="Seu celular:">
                 <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem:" required></textarea>
                 <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
@@ -132,20 +120,21 @@
                 Mensagem enviada com sucesso!
             </div>
         </div>
-    </section><!--formulario-->
-        <div class="redes-sociais">
-            <a href="https://www.instagram.com/arqgiovannalbuquerque/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://api.whatsapp.com/send?phone=5515997925520" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/in/giovanna-albuquerque-64406b226/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
     </section>
+
+    <!-- Redes Sociais -->
+    <div class="redes-sociais">
+        <a href="https://www.instagram.com/arqgiovannalbuquerque/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=5515997925520" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/giovanna-albuquerque-64406b226/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
+        <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="/img/LOGO MARCA GA TERRACOTA.png" alt="Giovanna Albuquerque Arquitetura">
+                    <img src="/img/LOGO MARCA GA TERRACOTA.png" alt="Giovanna Albuquerque Arquitetura" loading="lazy">
                 </div>
                 
                 <div class="footer-info-wrapper">
@@ -153,29 +142,30 @@
                         <div class="footer-col">
                             <h3>ENDEREÇO</h3>
                             <p>Av. Dr. Américo Figueiredo, Nº 3656, sala 02<br>
-                            Júlio Mesquita Filho - CEP: 18053-000 Sorocaba/SP</p>
-                        </div>
-                        
-                        <div class="footer-col">
+                            Júlio Mesquita Filho - CEP: 18053-000<br>
+                            Sorocaba/SP</p>
                         </div>
                     </div>
-                
                 </div>
             </div>
             
             <div class="footer-copyright">
-                <p>&copy; 2025 Giovanna Albuquerque Arquitetura | Interiores. Todos os direitos reservados.</p>
+                <p>&copy; <span id="currentYear"></span> Giovanna Albuquerque Arquitetura | Interiores. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
-    </footer>
-    <script src="/javascript/projeto.js"></script>
+
+    <!-- Preloader -->
     <div class="preloader">
-        <!-- Pode adicionar uma animação ou spinner aqui -->
         <div class="loader"></div>
     </div>
     
+    <script src="/javascript/projeto.js"></script>
     <script>
+        // Atualiza o ano do copyright automaticamente
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Preloader
         window.addEventListener('load', function() {
             const preloader = document.querySelector('.preloader');
             preloader.classList.add('fade-out');

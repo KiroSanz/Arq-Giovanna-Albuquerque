@@ -688,7 +688,7 @@ footer {
         top: 80px;
         left: 0;
         width: 100%;
-        background: white;
+        background-color: #00000000;
         flex-direction: column;
         padding: 20px 0;
     }
@@ -702,7 +702,9 @@ footer {
     }
     
     .menu-mobile {
-        display: block;
+        display: flex;
+        background-color: #00000000;
+        border-color: #00000000;
     }
     
     .sobre {
