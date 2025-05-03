@@ -139,7 +139,7 @@ header.scrolled .menu-mobile {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #ECE9E0;
+    color: #fffcf4;
     position: relative;
     padding-top: 80px;
 }
@@ -158,6 +158,7 @@ header.scrolled .menu-mobile {
     z-index: 2;
     max-width: 800px;
     padding: 0 20px;
+    filter:contrast(1);
 }
 
 .hero-text h1 {
@@ -176,11 +177,16 @@ header.scrolled .menu-mobile {
 .hero-text h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #F5F5F5;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+    filter: glow ;
 }
 
 .hero-text p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 30px;
+    color: #F5F5F5;
+    text-shadow: 5px 5px 5px rgb(255, 255, 255);
 }
 
 /* Portfolio */
