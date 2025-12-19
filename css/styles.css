@@ -5,7 +5,20 @@
     box-sizing: border-box;
 }
 
-/* Adicione no início do seu CSS */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #ECE9E0;
+}
+
+/* Preloader */
 .preloader {
     position: fixed;
     top: 0;
@@ -24,49 +37,27 @@
     opacity: 0;
 }
 
-body {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #333;
-    line-height: 1.6;
-    background-color: #ECE9E0; /* ou outra cor que combine com seu design */
-}
+/* Typography & Links */
+h1, h2, h3 { font-weight: 700; }
+a { text-decoration: none; color: inherit; }
 
-h1, h2, h3 {
-    font-weight: 700;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Ativa o scroll suave em todo o site */
-html {
-    scroll-behavior: smooth;
-  }
-  
-  /* Estilo do botão (opcional - ajuste conforme seu design) */
-  .smooth-scroll-btn {
+.smooth-scroll-btn {
     display: inline-block;
     padding: 12px 24px;
     background-color: #d56a40;
     color: #ECE9E0;
-    text-decoration: none;
     border-radius: 4px;
     font-weight: 500;
     transition: all 0.4s ease;
     cursor: pointer;
     border: none;
     font-size: 1rem;
-  }
-  
-  .smooth-scroll-btn:hover {
+}
+
+.smooth-scroll-btn:hover {
     background-color: #d56a59;
     transform: translateY(-2px);
-  }
+}
 
 /* Header/Navbar */
 header {
@@ -89,12 +80,13 @@ header.scrolled {
 }
 
 .logo img {
-    width: 350px;
+    width: 300px; /* Reduzi levemente o padrão */
+    max-width: 80%;
     transition: all 0.5s ease;
 }
 
 header.scrolled .logo img {
-    width: 250px;
+    width: 220px;
 }
 
 nav ul {
@@ -117,15 +109,11 @@ header.scrolled nav ul li a {
     color: #333;
 }
 
-nav ul li a:hover {
-    color: #8f8273;
-}
-
 .menu-mobile {
     display: none;
     cursor: pointer;
     color: #ECE9E0;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 header.scrolled .menu-mobile {
@@ -142,15 +130,13 @@ header.scrolled .menu-mobile {
     text-align: center;
     color: #fffcf4;
     position: relative;
-    padding-top: 80px;
+    padding: 80px 20px 0;
 }
 
 .hero::before {
+    content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0, 0, 0, 0.4);
 }
 
@@ -158,92 +144,57 @@ header.scrolled .menu-mobile {
     position: relative;
     z-index: 2;
     max-width: 800px;
-    padding: 0 20px;
-    filter:contrast(1);
 }
 
 .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 8vw, 3.5rem);
     margin-bottom: 10px;
     letter-spacing: 3px;
 }
 
 .hero-text .subtitle {
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
     letter-spacing: 5px;
     margin-bottom: 40px;
     text-transform: uppercase;
 }
 
 .hero-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
     color: #F5F5F5;
-    text-shadow: 5px 5px 5px rgb(0, 0, 0);
-    filter: glow ;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    margin-bottom: 20px;
 }
 
 .hero-text p {
-    font-size: 1.4rem;
-    margin-bottom: 30px;
+    font-size: clamp(1rem, 4vw, 1.4rem);
     color: #F5F5F5;
-    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    margin-bottom: 30px;
 }
 
-/* Portfolio */
-.contato {
-    padding: 100px 10%;
-    text-align: center;
-}
-
-/* Seção Portfólio */
-/* Estilos da seção Portfólio */
+/* Portfolio Section */
 .portfolio {
-    padding: 4rem 2rem;
+    padding: 80px 5%;
     background-color: #ECE9E0;
     text-align: center;
 }
 
-.portfolio-header {
-    margin-bottom: 3rem;
-}
-
-.portfolio-header h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 1rem;
-}
-
-.portfolio-header p {
-    color: #666;
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Grid de projetos */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     max-width: 1200px;
-    margin: 0 auto 3rem;
+    margin: 3rem auto;
 }
 
-/* Item do portfólio */
 .portfolio-item {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
 }
 
-.portfolio-item:hover {
-    transform: translateY(-5px);
-}
-
-/* Imagem do projeto */
 .portfolio-img {
     width: 100%;
     height: 300px;
@@ -252,13 +203,9 @@ header.scrolled .menu-mobile {
     transition: filter 0.5s ease;
 }
 
-/* Overlay que aparece ao passar o mouse */
 .portfolio-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(0, 0, 0, 0.7);
     color: #ECE9E0;
     display: flex;
@@ -270,63 +217,8 @@ header.scrolled .menu-mobile {
     padding: 20px;
 }
 
-.portfolio-overlay h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-/* Link "Ver projeto" */
-.portfolio-link {
-    color: #ECE9E0;
-    text-decoration: none;
-    border: 1px solid #ECE9E0;
-    padding: 8px 15px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.portfolio-link:hover {
-    background-color: #ECE9E0;
-    color: #333;
-}
-
-/* Efeitos ao passar o mouse */
-.portfolio-item:hover .portfolio-img {
-    filter: grayscale(100%);
-}
-
-.portfolio-item:hover .portfolio-overlay {
-    opacity: 1;
-}
-
-/* Botão Mais Projetos */
-.portfolio-more-container {
-    text-align: center;
-}
-
-.more-link {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #333;
-    color: #ECE9E0;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.more-link:hover {
-    background-color: #555;
-    transform: translateY(-2px);
-}
-
-/* Container do botão Mais Projetos */
-.portfolio-more-container {
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-}
+.portfolio-item:hover .portfolio-overlay { opacity: 1; }
+.portfolio-item:hover .portfolio-img { filter: grayscale(100%); }
 
 .more-link {
     display: inline-block;
@@ -334,137 +226,66 @@ header.scrolled .menu-mobile {
     background: #d56a40;
     color: #ECE9E0;
     border-radius: 5px;
-    text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s;
+    transition: 0.3s;
 }
 
-.more-link:hover {
-    background: #d56a59;
-    transform: translateY(-3px);
-}
-
-/* Responsivo */
-@media screen and (max-width: 768px) {
-    .portfolio {
-        padding: 60px 5%;
-    }
-    
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* Seção Sobre - Layout Atualizado */
+/* Sobre Section */
 .sobre {
-    position: relative;
-    padding: 100px 0;
+    padding: 80px 5%;
     background: #ECE9E0;
-    overflow: hidden;
-}
-
-.sobre::before {
-    /* content: ''; */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 40%;
-    background: #ECE9E0;
-    z-index: 0;
 }
 
 .sobre-container {
-    position: relative;
-    z-index: 1;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
+    background: #ECE9E0;
     box-shadow: 0px 0px 35px #dad1ba;
     border-radius: 15px;
-}
-
-.sobre h2 {
-    font-size: 2.5rem;
-    color: #D56A40;
-    text-align: center;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-left: 5px;
-}
-
-.sobre p {
-    font-size: 20px;
-    margin-left: 15px;
-    text-align: justify;
-    text-justify: inter-word;
-
+    overflow: hidden;
 }
 
 .sobre-content {
     display: flex;
-    background: #ECE9E0;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    overflow: hidden;
-    align-items: center; /* Alinha verticalmente */
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .sobre-texto {
     flex: 1;
     padding: 50px;
+    min-width: 300px;
+}
+
+.sobre-texto h2 {
+    font-size: 2.2rem;
+    color: #D56A40;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.sobre-texto p {
+    font-size: 1.1rem;
+    text-align: justify;
 }
 
 .sobre-imagem {
     flex: 1;
-    padding: 20px;
+    padding: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    min-width: 300px;
 }
 
 .sobre-imagem img {
     width: 100%;
     max-width: 400px;
-    height: auto;
     border-radius: 8px;
-    object-fit: cover;
 }
 
-/* Responsivo */
-@media screen and (max-width: 992px) {
-    .sobre-content {
-        flex-direction: column;
-    }
-    
-    .sobre-imagem {
-        padding: 0 20px 40px 20px;
-    }
-    
-    .sobre-imagem img {
-        max-width: 100%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .sobre::before {
-        height: 30%;
-    }
-    
-    .sobre-texto {
-        padding: 30px;
-    }
-    
-    .sobre h2 {
-        font-size: 2rem;
-    }
-}
-
-/* Contact Form Section */
+/* Contact Form */
 .form-section {
-    margin-top: 10vh;
-    padding: 0 0;
+    padding: 80px 5%;
     background-color: #ECE9E0;
 }
 
@@ -473,297 +294,127 @@ header.scrolled .menu-mobile {
     font-size: 2.5rem;
     color: #d56a40;
     margin-bottom: 40px;
-    text-transform: uppercase;
 }
 
 #contact-form {
     max-width: 600px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
-.form-group {
-    margin-bottom: 25px;
-}
+.form-group { margin-bottom: 20px; }
 
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: #333;
-}
-
-.form-group input,
-.form-group textarea {
+.form-group input, .form-group textarea {
     width: 100%;
-    padding: 12px 15px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
-    font-family: 'Cambria', serif;
-    background-color: rgba(255, 255, 255, 0.9);
-    transition: all 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #d56a40;
-    box-shadow: 0 0 5px rgba(213, 106, 64, 0.3);
-}
-
-.form-group textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.form-submit {
-    text-align: center;
-    margin-top: 30px;
+    font-family: inherit;
 }
 
 .submit-btn {
+    width: 100%;
     background-color: #d56a40;
     color: white;
     border: none;
-    padding: 12px 30px;
-    font-size: 1rem;
+    padding: 15px;
     font-weight: 600;
-    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
+    border-radius: 5px;
 }
 
-.submit-btn:hover {
-    background-color: #c45a30;
-    transform: translateY(-2px);
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .form-group {
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .section-title {
-        font-size: 1.8rem;
-    }
-    
-    .submit-btn {
-        padding: 10px 25px;
-    }
-}
-
-footer {
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding-bottom: 15px;
-    font-weight: 600;
-    border-top: 2px #d56a40;
-}
-
-.redes-sociais a:hover {
-    color: #000000;
-}
-
+/* Footer - CORRIGIDO */
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background: #ECE9E0;
-    font-family: 'Montserrat', sans-serif;
-    width: 100vw;
-    height: 60vh;
-}
-
-.footer-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-}
-
-.footer-line-center {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    margin: 10vh 0 0 0;
+    padding: 60px 5% 20px;
+    width: 100%;
 }
 
 .footer-line {
     height: 2px;
     background-color: #d56a40;
-    width: 80vw;
-    border-radius: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 40px;
 }
 
 .footer-info-wrapper {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    flex-direction: row;
-    margin: 10vh 0;
-}
-
-.footer-logo {
-    width: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
 }
 
 .footer-logo img {
-    display: flex;
-    width: 400px;
-    max-width: 500px;
+    width: 300px;
     height: auto;
-    margin-bottom: px;
 }
+
 .footer-address {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-    height: auto;
-    margin: 0 8vw;
-}
-
-.footer-address h3 {
-    margin-bottom: 1vh;
-    color: #d56a40;
-}
-
-.footer-address p {
+    text-align: center;
     color: #d56a40;
 }
 
 .redes-sociais {
-    width: 400px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #d56a40;
+    gap: 20px;
 }
 
 .redes-sociais a {
-    font-size: 4rem;
-    margin: 0 10px;
+    font-size: 2.5rem;
     color: #d56a40;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
-.footerIcon :hover {
-    transition: all 0.3s ease;
-    transform: translateY(-3px);
+.redes-sociais a:hover {
+    transform: translateY(-5px);
 }
-
 
 .footer-copyright {
     text-align: center;
+    margin-top: 40px;
     font-size: 0.9rem;
     color: #d56a40;
-    margin: 2vh 0 0 0;
 }
 
-
-/* Responsivo */
-@media screen and (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .footer-logo {
-        padding-left: 0;
-        text-align: center;
-    }
-    
-    .footer-info {
-        margin-right: 0;
-        justify-content: left;
-    }
-    
-    .footer-social {
-        justify-content: center;
-        margin-right: 0;
-    }
+/* MEDIA QUERIES - RESPONSIVIDADE */
+@media screen and (max-width: 992px) {
+    .sobre-content { flex-direction: column; }
+    .footer-info-wrapper { flex-direction: column; text-align: center; }
 }
 
 @media screen and (max-width: 768px) {
-    .footer-info {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .footer-content {
-        gap: 30px;
-    }
-    
-    .footer-col h3, 
-    .footer-col p {
-        margin-left: 0;
-        justify-content: end;
-    }
-    
-    .footer-social {
-        gap: 50px;
-    }
-}
-
-/* Responsivo */
-@media screen and (max-width: 768px) {
+    /* Menu Mobile */
     nav ul {
         display: none;
         position: absolute;
-        top: 80px;
+        top: 100%;
         left: 0;
         width: 100%;
-        background-color: #00000000;
+        background: #ECE9E0;
         flex-direction: column;
-        padding: 20px 0;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
-    
-    nav ul.show {
-        display: flex;
-    }
-    
-    nav ul li {
-        margin: 10px 0;
-    }
-    
-    .menu-mobile {
-        display: flex;
-        background-color: #00000000;
-        border-color: #00000000;
-    }
-    
-    .sobre {
-        flex-direction: column;
-    }
-    
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero-text h2 {
-        font-size: 1.8rem;
-    }
-    
-    .hero-text .subtitle {
-        font-size: 1rem;
-        letter-spacing: 3px;
-    }
-    
-    .logo img {
-        width: 250px;
-    }
-    
-    header.scrolled .logo img {
-        width: 200px;
-    }
-}
 
+    nav ul.show { display: flex; }
+
+    nav ul li { margin: 15px 0; text-align: center; }
+    
+    nav ul li a { color: #333 !important; }
+
+    .menu-mobile { display: block; }
+
+    /* Seções */
+    .hero { height: auto; padding: 150px 20px 80px; }
+    
+    .sobre-texto { padding: 30px 20px; }
+    
+    .sobre-texto h2 { font-size: 1.8rem; text-align: center; }
+
+    /* Footer Ajustes */
+    .footer-logo img { width: 220px; }
+    
+    .redes-sociais a { font-size: 2rem; }
+}
