@@ -72,14 +72,14 @@
                 </div>
             </div>
             <div class="project-info">
-                <span class="project-category">Residencial</span>
+                <span class="project-category">Residencial | Interiores</span>
                 <h3>Residência CL</h3>
                 <p>Piedade/SP - 2024</p>
             </div>
         </div>
 
         <!-- Projeto 3 -->
-        <div class="project-card" data-category="residencial">
+        <div class="project-card" data-category="interiores">
             <div class="project-image">
                 <img src="/img/lc.jpg" alt="Área Social LC">
                 <div class="project-overlay">
@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="project-info">
-                <span class="project-category">Residencial</span>
+                <span class="project-category">Interiores</span>
                 <h3>Área Social LC</h3>
                 <p>Piedade/SP - 2024</p>
             </div>
@@ -111,7 +111,7 @@
         </div>
 
         <!-- Projeto 5 -->
-        <div class="project-card" data-category="comercial">
+        <div class="project-card" data-category="comercial interiores">
             <div class="project-image">
                 <img src="/img/Otica Logo.jpg" alt="Apartamento JK">
                 <div class="project-overlay">
@@ -120,7 +120,7 @@
                 </div>
             </div>
             <div class="project-info">
-                <span class="project-category">Comercial</span>
+                <span class="project-category">Comercial | Interiores</span>
                 <h3>Ótica Conexão dos Óculos</h3>
                 <p>Piedade/SP - 2025</p>
             </div>
@@ -143,39 +143,40 @@
         </div>
 
                 <!-- Projeto 7 -->
-        <div class="project-card" data-category="comercial">
+        <div class="project-card" data-category="comercial interiores">
             <div class="project-image">
                 <img src="/img/ct1.jpg" alt="Cartório Carvalho">
                 <div class="project-overlay">
-                    <h3>Cartório Carvalho</h3>
+                    <h3>Tabelionato Carvalho</h3>
                     <a href="/projetos/html/cartoriocarvalho.html" class="project-link">Ver detalhes →</a>
                 </div>
             </div>
             <div class="project-info">
-                <span class="project-category">Interiores</span>
+                <span class="project-category">Comercial | Interiores</span>
                 <h3>Cartório Carvalho</h3>
                 <p>Ibiúna/SP - 2025</p>
             </div>
         </div>
 
                 <!-- Projeto 8 -->
-        <div class="project-card" data-category="residencial">
-            <div class="project-image">
-                <img src="/img/rc1.jpg" alt="Casa de Praia">
-                <div class="project-overlay">
-                    <h3>Residência Cavalcante</h3>
-                    <a href="/projetos/html/residenciacavalcante.html" class="project-link">Ver detalhes →</a>
+            <div class="project-card" data-category="residencial interiores">
+                <div class="project-image">
+                    <img src="/img/rc1.jpg" alt="Casa de Praia">
+                    <div class="project-overlay">
+                        <h3>Residência Cavalcante</h3>
+                        <a href="/projetos/html/residenciacavalcante.html" class="project-link">Ver detalhes →</a>
+                    </div>
                 </div>
-            </div>
-            <div class="project-info">
-                <span class="project-category">Residêncial</span>
-                <h3>Residência Cavalcante</h3>
-                <p>Alphaville/SP - 2025</p>
+                <div class="project-info">
+                    <span class="project-category">Residêncial | Interiores</span>
+                    <h3>Residência Cavalcante</h3>
+                    <p>Alphaville/SP - 2025</p>
+                </div>
             </div>
         </div>
 
                 <!-- Projeto 9 -->
-        <div class="project-card" data-category="residencial">
+        <div class="project-card" data-category="residencial interiores">
             <div class="project-image">
                 <img src="/img/fotovb7.jpg" alt="Casa de Praia">
                 <div class="project-overlay">
@@ -217,6 +218,34 @@
     <script src="/javascript/projeto.js"></script>
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.filter-btn');
+        const projects = document.querySelectorAll('.project-card');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // 1. Gerenciar classe ativa nos botões
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // 2. Pegar o filtro selecionado
+                const filterValue = button.getAttribute('data-filter');
+
+                // 3. Filtrar os projetos
+                projects.forEach(project => {
+                    // Pegamos as categorias do projeto e transformamos em uma lista
+                    const projectCategories = project.getAttribute('data-category').split(' ');
+
+                    if (filterValue === 'all' || projectCategories.includes(filterValue)) {
+                        project.style.display = 'block';
+                        // Opcional: Adicionar uma animação de fade aqui
+                    } else {
+                        project.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
     </script>
 </body>
 </html>
